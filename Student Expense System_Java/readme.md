@@ -2,3 +2,8 @@ Only change the folder's path to make it work, It will automatically create the 
 Tanha path'i folder'aka bgora bo awai hamui ish bkat, xoi folder'aka u file'akani ka drust akat.
 
 static File path = new File("C:\\Users\\balen\\OneDrive\\Desktop\\Assignment\\Student Espense System");
+
+
+<img src="ScreenShots/st1.png" width="75%">
+<img src="ScreenShots/st2.png" width="75%">
+<img src="ScreenShots/st3.png" width="75%">
