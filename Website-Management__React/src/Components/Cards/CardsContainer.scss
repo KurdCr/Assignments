@@ -1,0 +1,123 @@
+@import '../styles/all';
+
+
+#cards-container{
+
+    width: 70vw;
+    margin: 5vh auto 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+///////////////
+.search-input{
+    width: 30%;
+    background-color: $secondary-color-bright1;
+    border-radius: 25px;
+    padding: 5px 10px;
+    outline: none;
+  
+
+}
+/////////////////
+@media only screen and (max-width: 850px) {
+    #cards-container{
+        width: 85vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #cards-container{
+        width: 95vw;
+    }
+}
+//////////////////////////
+
+
+
+ /////////////////////////////////////start of card
+ #cards{
+     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    //grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    align-items: stretch;
+
+ }
+.card{
+    background-color: $secondary-color-dark4;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+    
+ 
+    border-radius: 50px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    width: auto;
+    .card-img{
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    }
+    .card-under-img{
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card-infos{
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: $secondary-color-light1;
+        font-size: 0.9rem;
+
+        .card-info-element{
+        //    font-weight: 200;
+        }
+        .card-info-price{
+        font-size: 1.5rem;
+        color: red;
+        font-family: 'Freckle Face', cursive;
+        }
+    }
+    .card-button, #card-button-create{
+    
+        padding: 0.2em 0.8em;
+        border:0.1em solid $secondary-color-normal2;
+    
+
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Bangers', cursive;
+        font-size: 1.7rem;
+        color: $secondary-color-normal2;
+    }
+    #card-button-create{
+        padding: 0.5em 0.8em;
+
+        border:0.1em solid $secondary-color-normal2;
+        color: $secondary-color-normal2;
+        
+    }
+    .card-button:hover, #card-button-create:hover{
+        color:$secondary-color-dark4;
+        background-color:$secondary-color-light1;
+    }
+    }
+}
+///////////////////////////////end
+
+ 

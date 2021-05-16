@@ -1,0 +1,124 @@
+@import '../styles/all';
+
+#loading-container{
+    position: relative;
+
+    width: 55vw;
+    min-height: 75vh;
+
+    margin: 5vh auto 0 auto;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include box-shadow ($secondary-color-dark4, $secondary-color-dark4, 0.3);
+
+
+
+    #loading-dots{
+        width: 100%; //baqadar container
+    
+        #loading-dot{
+            position: absolute;
+            
+            width:   10vmin;
+            height:   10vmin;
+
+            border-radius: 100%;
+            
+            animation-name: dot;
+            animation-timing-function: ease;   
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;   
+            // background-color: $secondary-color-normal2;
+            // animation-direction: alternate; 
+        }
+    }
+
+}
+
+
+@keyframes dot {
+    0%  {
+            left:0px; 
+            top:0px;
+        }
+    25% {
+            left:calc( 100% - 10vmin);
+            top:0px;
+        }
+    50% {
+            left:calc( 100% - 10vmin);  
+            top: calc( 100% - 10vmin);
+            transform:rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+        }
+    75% {
+            left:0px; 
+            top: calc( 100% - 10vmin); 
+        }
+    100%{
+            left:0px; 
+            top:0px;
+            transform:rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+        }
+}//akre rotate aka 1 jar har 3 ki bnusm la 100% ka u degreyaka 720 be 
+
+
+@keyframes loading {
+    0%  {
+            background-color: $secondary-color-bright3; 
+            font-size: 4vmin;
+            color: $secondary-color-light1; 
+        }
+    25% {
+            background-color: $secondary-color-normal2; 
+            font-size: 5vmin;
+            color: $secondary-color-dark4; 
+        }
+    50% {
+            background-color: $secondary-color-light2; 
+            font-size: 6vmin;
+            color: $secondary-color-bright3; 
+        }
+    75% {
+            background-color: $secondary-color-normal2; 
+            font-size: 5vmin;
+            color: $secondary-color-dark4; 
+        }
+    100%{
+            background-color: $secondary-color-bright3; 
+            font-size: 4vmin;
+            color: $secondary-color-light1; 
+        }
+}
+  
+////////////////////////
+@media only screen and (max-width: 950px) {
+    #loading-container{
+        width: 65vw;
+        min-height: 80vh;    
+    } 
+}
+@media only screen and (max-width: 850px) {
+    #loading-container{
+        width: 80vw;
+        min-height: 80vh;    
+    } 
+}
+@media only screen and (max-width: 500px) {
+    #loading-container{
+        width: 95vw;
+        min-height: 95vh;    
+    } 
+}

@@ -1,0 +1,141 @@
+@import '../styles/all';
+
+//////////// only difference
+#form-transaction-page{ 
+  
+  width: 65vw;
+  border-radius: 10px;
+  margin: 5vh auto 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: auto;
+}
+/////////////
+
+#form-transaction{
+    // min-height: 30vh ;
+    width: 54vw;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  
+    overflow: auto;
+}
+///////////////////////////
+.search-input{
+  width: 35%;
+   background-color: $secondary-color-bright1;
+   border-radius: 25px;
+   padding: 5px 10px;
+   outline: none;
+ 
+  margin-bottom: 3vh;
+  
+ }
+////////////////////////////
+@media only screen and (max-width: 850px) {
+  #form-transaction, #form-transaction-page{
+      width: 85vw;
+      margin: 5vh auto 0 auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #form-transaction, #form-transaction-page   {
+      width: 95vw;
+      margin: 5vh auto 0 auto;
+  }
+}
+////////////////////
+
+#div-table-container{
+  width: 100%;
+  overflow: auto;  border-radius: 1em;
+}
+#form-table {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+  }
+.form-table-returned{
+  background-color: red !important;
+}
+.form-table-received{
+  background-color: green !important;
+}
+
+.form-table-returned, .form-table-received{
+  width: 100%;
+  height: 100%;
+  padding:3px;
+  cursor: pointer;  
+
+  font-family: 'Bangers', cursive;
+  font-size: 1rem;
+}
+.form-table-td-returned:hover{
+  background-color: rgb(151, 34, 34) !important;
+  color: $secondary-color-light1 !important;
+}
+.form-table-td-returned{
+  color: red !important;
+}
+.form-table-td-received:hover{
+  background-color: rgb(47, 128, 9) !important;
+  color: $secondary-color-light1 !important;
+}
+.form-table-td-received{
+  color: green !important;
+}
+  #th-returned{
+      color: red !important;
+  }
+  #th-received{
+    color: green !important;
+}
+  .description{
+    font-size: 0.7em !important;
+    overflow-wrap: break-word;
+  }
+
+  
+  #form-table td, #form-table th {
+    padding: 1em;
+    background: $secondary-color-light1;
+    border-bottom: 2px solid $secondary-color-light2;
+  }
+  
+
+  #form-table td:hover {
+      background-color: $secondary-color-light2 ;
+      color: $secondary-color-dark4 ;
+    }
+  
+  #form-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $secondary-color-dark4;
+    color: $secondary-color-light2;
+  }
+  #form-table td {
+    font-size: 0.8em;
+    background-color: $secondary-color-bright1;
+    color: $secondary-color-dark4;
+  }
+
+  #form-table ul{
+        text-decoration: none;
+        List-style: none;
+  }
+
+
+
+
+  

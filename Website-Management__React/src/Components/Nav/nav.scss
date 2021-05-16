@@ -1,0 +1,218 @@
+@import '../styles/all';
+$width-left: 25vw;
+ 
+nav{
+
+}
+
+
+////
+#check-button{
+  display: none;
+}
+#check-label{
+  flex-grow: 2;
+  display: none;
+
+  cursor: pointer;
+
+  
+  font-size: 1.8rem;
+  color: $secondary-color-dark4;
+}
+////
+
+////
+#mobile-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $secondary-color-dark4;
+  .mobile-menu-element{
+    display: none;
+
+    cursor: pointer;
+    margin-bottom: 6vh;
+    text-decoration: none;
+
+    // font-family: 'Concert One', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $secondary-color-normal2;
+  }
+}
+////mobile-menu
+
+
+////
+
+////nav-left
+#nav-left{
+  position: fixed;
+  // z-index: -1;
+  // margin-right: $nav-left-width;
+  background-color: $secondary-color-dark4;
+  // border: black 0px solid;
+  // border-radius: 0 0 50px 0;
+  width: $nav-left-width;
+  height: 100vh;
+  display: inline-block;
+
+  #logo-container{  
+    #logo{
+      width: 100%;
+    }
+    #logo:hover{
+      transform: scale(1.02);
+      transition: all 0.2s linear 0s;
+    } 
+  }
+}
+////
+#nav-top{
+ 
+  
+  width: 100%;
+  height:  $nav-height;
+  // margin-bottom: $nav-height;
+ 
+
+  overflow: hidden;
+  //logo ka ba width dam nawa boya height akai zora ka auto ya bama bashakai ka karigari bo hover nabe
+  
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+  background-color: $secondary-color-bright3;
+  color: $secondary-color-light1;
+}
+#nav-top-left{
+  flex-grow: 3;
+
+}
+////left-nav
+
+////
+#nav-top-right{
+  flex-grow: 2;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+
+
+
+  .nav-element{
+   
+    margin-right: 3vh;
+    text-decoration: none; //underline
+    list-style: none; //style 'dot'
+
+    // font-family: 'Concert One', cursive;
+    font-size: 1rem;
+    color: $secondary-color-bright1;
+    font-weight: bold;
+
+    transition: all 0.2s linear 0s;
+    &:hover{
+      box-shadow: 0px 5px 40px -10px rgba($secondary-color-light1, 0.26);
+
+      color: $secondary-color-light1;
+
+      transform: scale(1.05);
+      transition: all 0.2s linear 0s;
+    }
+  } 
+}
+
+
+
+
+#nav-top-right-account{
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  #nav-top-right-logout{
+    cursor: pointer;
+  
+    margin-right: 3vh;
+    text-decoration: none; 
+    list-style: none; 
+  
+    // font-family: 'Concert One', cursive;
+    font-size: 1rem;
+    color: $secondary-color-bright1;
+    font-weight: bold;
+  
+    transition: all 0.2s linear 0s;
+    &:hover{
+      box-shadow: 0px 5px 40px -10px rgba($secondary-color-light1, 0.26);
+  
+      color: $secondary-color-light1;
+  
+      transform: scale(1.05);
+      transition: all 0.2s linear 0s;
+    }
+  }
+}
+
+  
+  
+
+
+
+
+
+
+  
+
+
+////nav-top-right
+
+
+
+
+
+@media  (max-width: 950px) {  
+  #nav-left{
+    left: 3000vh;
+  }
+  #nav-top-right{
+    display: none;
+  }
+  #mobile-menu{
+    position: fixed;
+    top: $nav-height;
+    left: -100%;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: 2;// bo awai saru 1 akakanish be
+   
+    transition: all linear 0.1s;
+    .mobile-menu-element{
+      display: block;
+    }
+  }
+
+
+  #check-label{
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #check-button:checked ~ #mobile-menu{
+    left: 0;
+  }
+   
+}

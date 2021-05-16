@@ -1,0 +1,72 @@
+@import '../styles/all';
+
+#genericNotFound-container{
+    width: 35%;
+    height: 70vh;   
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-template: 1fr 1fr/ 1fr ; 
+
+    border-radius: 10px;
+    margin: 5vh auto 0 auto;
+
+    @include box-shadow ( $secondary-color-dark4, $secondary-color-dark4, 0.3);
+} 
+
+
+
+#error-div{
+    width: 90%;
+    padding: 1vmin 0;
+
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5%;
+
+    background-color: $secondary-color-normal2;
+
+    #error-text{
+        font-size: clamp(3vmin, 16px, 4vmin);
+        color: $secondary-color-dark4;
+
+        font-family: 'Freckle Face', cursive;
+    } 
+    #error-text2{
+
+
+        text-align: center;
+        font-size: clamp(3vmin, 16px, 4vmin);
+        color: $secondary-color-light1;
+
+        font-family: 'Freckle Face', cursive;
+    }  
+}
+
+
+//////////////////////////////
+@media only screen and (max-width: 950px) {
+    #genericNotFound-container{
+        width: 65vw;
+        min-height: 80vh;    
+    } 
+}
+@media only screen and (max-width: 850px) {
+    #genericNotFound-container{
+        width: 80vw;
+        min-height: 80vh;    
+    } 
+}
+@media only screen and (max-width: 500px) {
+    #genericNotFound-container{
+        width: 95vw;
+        min-height: 95vh;    
+    } 
+}
