@@ -1,11 +1,11 @@
 import React from 'react'
 import './ContactUs.scss'
-import logo from './owner.jpg';
-import lizard from './lizard2.png';
+import logo from '../images/owner.jpg';
+import lizard from '../images/lizard2.png';
 
-import Facebook from './Facebook.svg';
-import Twiter from './Twiter.svg';
-import Github from './Github.svg';
+import Facebook from '../images/Facebook.svg';
+import Twiter from '../images/Twiter.svg';
+import Github from '../images/Github.svg';
 
 
 
