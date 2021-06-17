@@ -1,3 +1,4 @@
+A website management that lets create and remove items and edit their price and description, while allowing you to place orders and settle them.
 https://websitemanagment-4efda.web.app/
 
 <br/>
